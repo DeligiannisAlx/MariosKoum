@@ -28,8 +28,9 @@
         function initialise() {
             // create object literal to store map properties
             var myOptions = {
-                zoom: 8 // set zoom level
-                , mapTypeId: google.maps.MapTypeId.HYBRID // apply tile (options include ROADMAP, SATELLITE, HYBRID and TERRAIN)
+                zoom: 6, // set zoom level
+                // , mapTypeId: google.maps.MapTypeId.HYBRID // apply tile (options include ROADMAP, SATELLITE, HYBRID and TERRAIN)
+                mapTypeId: "satellite",
             };
 
             // create map object and apply properties
@@ -40,7 +41,7 @@
 
             // create array containing locations
             var locations = [
-                ['Komotini /br Marios Koum', 41.1224, 25.4066]
+                ['Komotini | Marios Koum', 41.1224, 25.4066]
                 // ['Coogee Beach', -33.923036, 151.259052],
                 // ['Cronulla Beach', -34.028249, 151.157507],
                 // ['Manly Beach', -33.80010128657071, 151.28747820854187],

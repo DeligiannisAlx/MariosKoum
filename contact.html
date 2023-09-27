@@ -3,35 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
     <link rel="stylesheet" href="style.css">
+    <title>Contact Us - Wine Map</title>
 </head>
-<body class="contact-page">
+<body>
     <header>
-        <h1>Contact Us</h1>
+        <h1 class="title">Wine Map</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <div class="container">
+    <div class="contact-page">
         <div class="contact-form">
-            <h2>Get in Touch</h2>
+            <h2>Contact Form</h2>
             <form action="#" method="post">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
-
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
+                <textarea id="message" name="message" required></textarea>
                 <button type="submit">Submit</button>
             </form>
         </div>
     </div>
+    <footer>
+        &copy; <span id="copyright-year">2023</span> Wine Map. All rights reserved.<br><p id="created-by">Created by Alé D.</p>
+    </footer>
+
+    <script>
+        // Get the current year
+        var currentYear = new Date().getFullYear();
+    
+        // Update the copyright year in the footer
+        document.getElementById("copyright-year").textContent = currentYear;
+    </script>
+    
+    
 </body>
+
 </html>

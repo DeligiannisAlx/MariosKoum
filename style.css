@@ -3,6 +3,9 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
 }
 
 header {
@@ -14,13 +17,6 @@ header {
   padding: 10px;
 }
 
-/* Home page styles */
-#map {
-  width: 100%;
-  height: 400px;
-  margin: 20px;
-}
-
 /* Contact page styles */
 .contact-page {
   background-image: url('grapes-background.jpg');
@@ -29,61 +25,64 @@ header {
   background-attachment: fixed;
   background-position: center;
   color: #fff;
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Display its children vertically */
+  justify-content: center; /* Vertically center its children */
+  align-items: center; /* Horizontally center its children */
 }
 
+/* Contact form styles */
 .contact-form {
-  background-color: rgba(128, 0, 0, 0.7);
+  background-color: #f5f5f5; /* Background color for the form */
   padding: 20px;
-  margin: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  text-align: left;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px; /* Set a maximum width for the contact form */
+  width: 100%; /* Ensure the form takes the full width on smaller screens */
 }
 
 .contact-form h2 {
-  color: #fff;
-  text-align: center;
+  color: #333; /* Heading text color */
+  font-size: 24px; /* Heading font size */
 }
 
-/* Set specific widths for input fields and textarea, and adjust input size */
 .contact-form label {
-  color: #fff;
   display: block;
-  margin-bottom: 5px;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #333; /* Label text color */
 }
 
 .contact-form input[type="text"],
-.contact-form input[type="email"] {
+.contact-form input[type="email"],
+.contact-form textarea {
   width: 100%;
-  padding: 5px;
+  padding: 10px; /* Input and textarea padding */
   margin-bottom: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #ccc; /* Input border */
   border-radius: 5px;
+  box-sizing: border-box; /* Include padding and border in the width calculation */
 }
 
 .contact-form textarea {
-  width: 100%;
-  padding: 5px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  height: 150px; /* Set a fixed height for the textarea */
 }
 
-/* Center the submit button */
 .contact-form button {
-  background-color: #800000;
-  color: #fff;
+  background-color: #800000; /* Button background color */
+  color: #fff; /* Button text color */
   border: none;
-  padding: 10px 20px;
+  padding: 10px 20px; /* Button padding */
   border-radius: 5px;
   cursor: pointer;
-  display: block;
-  margin: 0 auto;
 }
 
 .contact-form button:hover {
-  background-color: #600000;
+  background-color: #600000; /* Button background color on hover */
 }
+
 
 /* Header menu styles */
 nav ul {
@@ -109,6 +108,26 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* Title styles */
+.title {
+  margin-left: 20px; /* Add left margin to title */
+}
+
+/* Footer styles */
+footer {
+  background-color: #722f37;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto;
+  font-size: 14px;
+}
+
+footer #created-by {
+  margin-top: 10px; /* Add margin to the top of "Created by" text */
+  margin-bottom: 0px; /
+}
+
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
   /* Adjust styles for tablets and smaller screens */
@@ -117,8 +136,22 @@ nav a:hover {
       align-items: center;
   }
 
+  .title {
+      margin-left: 0; /* Remove left margin for title on smaller screens */
+      margin-bottom: 10px; /* Add bottom margin to title on smaller screens */
+  }
+
   nav ul {
       margin-top: 10px;
       justify-content: center;
+  }
+
+  .contact-form button {
+      width: 100%; /* Make the button full width on smaller screens */
+  }
+
+  /* Adjust footer styles for smaller screens */
+  footer {
+      font-size: 12px; /* Reduce font size for smaller screens */
   }
 }

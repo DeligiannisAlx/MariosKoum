@@ -25,7 +25,7 @@ function addMarker(lat, lng, title) {
         map: map,
         title: title,
         icon: {
-            url: 'wine-glass.png', // Replace with your wine glass icon image
+            url: 'grapes.png', // Replace with your wine glass icon image
             scaledSize: new google.maps.Size(30, 30)
         }
     });
